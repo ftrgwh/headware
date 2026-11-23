@@ -39,21 +39,6 @@ You can also open http://127.0.0.1:8931/ by hand while the game is running.
 - Save to game writes `config/headware/ears.json` and applies immediately
 - Settings live in `config/headware/config.json`
 
-## Generator
-
-```
-python scripts/cat_ears.py
-```
-
-Regenerates `src/main/resources/assets/headware/ears/plain.json` and `previews/plain.png`.
-
-The white striped ears are a separate preset:
-
-```
-python scripts/cat_ears.py --preset snow --resolution 64
-```
-
-which writes `assets/headware/ears/snow.json` and `previews/snow.png`.
 
 ## License
 
