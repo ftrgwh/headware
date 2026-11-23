@@ -1,0 +1,208 @@
+:root {
+  color-scheme: dark;
+  font: 14px/1.5 'Segoe UI', Arial, sans-serif;
+  --bg: #111315;
+  --panel: #191c1f;
+  --line: #30353a;
+  --text: #e8eaec;
+  --muted: #a4abb1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  background: #0e1012;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 15px;
+}
+
+header label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+header select {
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+}
+
+#status {
+  color: #f0a5a7;
+  font-size: 13px;
+}
+
+main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+}
+
+aside {
+  width: 176px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+button {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #22262a;
+}
+
+button.active {
+  border-color: #ffffff;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+button.armed {
+  border-color: #b3454a;
+  background: #3a1d1f;
+  color: #ffd7d8;
+}
+
+button.armed:hover {
+  background: #4a2528;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.color input {
+  width: 60px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+}
+
+#palette {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin: 8px 0;
+}
+
+#palette button {
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.config {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.config label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.config input[type='range'] {
+  width: 90px;
+}
+
+.config .range-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.config .range-row input[type='range'] {
+  width: 70px;
+}
+
+#distance-value {
+  min-width: 30px;
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+section {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #14171a;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+aside.stats {
+  width: 220px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+aside.stats p {
+  margin: 0 0 6px;
+}

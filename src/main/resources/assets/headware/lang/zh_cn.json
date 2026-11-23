@@ -1,0 +1,4 @@
+{
+  "message.headware.editor.opened": "正在浏览器中打开 Headware 编辑器：%s",
+  "message.headware.editor.unavailable": "Headware 编辑器服务器未运行。"
+}

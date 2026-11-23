@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Headware</title>
+    <link rel="stylesheet" href="editor.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Headware</h1>
+      <label>Grid <input id="grid" type="checkbox" checked /></label>
+      <label>Mirror <input id="mirror" type="checkbox" /></label>
+      <label>Resolution
+        <select id="resolution-select"></select>
+      </label>
+      <label>Slice <input id="slice-enabled" type="checkbox" /></label>
+      <input id="slice" type="range" min="-16" max="0" step="1" value="-9" />
+      <span id="status"></span>
+    </header>
+    <main>
+      <aside>
+        <button id="tool-paint" class="active" data-tool="paint">Paint</button>
+        <button id="tool-erase" data-tool="erase">Erase</button>
+        <button id="tool-add" data-tool="add">Add</button>
+        <button id="tool-pick" data-tool="pick">Pick color</button>
+        <label class="color">Color <input id="color" type="color" value="#2b2b2b" /></label>
+        <div id="palette"></div>
+        <button id="undo" disabled>Undo</button>
+        <button id="redo" disabled>Redo</button>
+        <button id="reset">Reset</button>
+        <button id="clear">Clear all</button>
+        <button id="save">Save to game</button>
+        <button id="export">Export JSON</button>
+        <button id="import">Import JSON</button>
+        <input id="file" type="file" accept="application/json" hidden />
+        <div class="config">
+          <label>Enabled <input id="enabled" type="checkbox" checked /></label>
+          <label>Self only <input id="self-only" type="checkbox" /></label>
+          <label>Distance
+            <span class="range-row">
+              <input id="distance" type="range" min="8" max="128" step="8" value="64" />
+              <output id="distance-value" for="distance">64</output>
+            </span>
+          </label>
+          <button id="save-config">Save settings</button>
+        </div>
+      </aside>
+      <section>
+        <canvas id="view"></canvas>
+      </section>
+      <aside class="stats">
+        <p>Drag to paint</p>
+        <p>Paint on the top and four sides, not the bottom</p>
+        <p>Add stacks a layer on the clicked face</p>
+        <p>Right-drag or middle-drag to rotate</p>
+        <p>Wheel to zoom</p>
+        <p id="count"></p>
+        <p id="resolution"></p>
+      </aside>
+    </main>
+    <script src="editor.js"></script>
+  </body>
+</html>

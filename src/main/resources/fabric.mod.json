@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "headware",
+  "version": "${version}",
+  "name": "Headware",
+  "description": "Voxel head cosmetics with an in-game 3D editor.",
+  "authors": ["ftr"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.headware.client.HeadwareClient"]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

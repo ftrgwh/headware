@@ -1,0 +1,4 @@
+{
+  "message.headware.editor.opened": "Opening the Headware editor in your browser: %s",
+  "message.headware.editor.unavailable": "The Headware editor server is not running."
+}
